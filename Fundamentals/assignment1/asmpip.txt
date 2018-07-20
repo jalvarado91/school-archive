@@ -1,0 +1,11 @@
+;  PROGRAMMER:  Archimedes E. Pythagoras  123-45-6789
+;
+;  CLASS:       COP 2210-02   MW 5:00
+;
+;  INSTRUCTOR:  Norman Pestaina  ECS 364
+;
+;  ASSIGNMENT:  #1 Arithmetic & Simple I/O.   DUE Thursday 09/12
+;
+; CERTIFICATION: I certify that this work is my own and that
+;                 none of it is the work of any other person.
+;

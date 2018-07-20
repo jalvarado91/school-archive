@@ -1,0 +1,6 @@
+Microsoft said Tuesday the company would comply with a preliminary ruling by Federal District Court Judge Ronald H. Whyte that Microsoft is no longer able to use the Java Compatibility Logo on its packaging and websites for Internet Explorer and Software Developers Kit for Java.
+"We remain confident that once all the facts are presented in the larger case, the court will find Microsoft to be in full compliance with its contract with Sun," stated Tom Burt, Associate General Counsel for Microsoft Corporation. "We are disappointed with this decision, but we will immediately comply with the Court's order."
+
+Microsoft has been in the forefront of helping developers use the Java programming language to write cutting-edge applications. The company has committed significant resources so that Java developers have the option of taking advantage of Windows features when writing software using the Java language. Providing the best tools and programming options will continue to be Microsoft's goal.
+
+"We will continue to listen to our customers and provide them the tools they need to write great software using the Java language," added Tod Nielsen, General Manager for Microsoft's Developer Relations Group/Platform Marketing.

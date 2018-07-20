@@ -1,0 +1,17 @@
+;	Implementation of Figure 5.12
+;	Patt & Patel, page 133
+;----------------------------------------------------
+0011 0000 0000 0000	;Load Address x3000
+;Initialization
+1110 001 0 1111 1111	;R1 = x3100 Pointer
+0101 011 011 1 00000	;R3 = 0     Accumulator
+0101 010 010 1 00000	
+0001 010 010 1 01100	;R2 = 12    Loop Counter
+;Loop starts here
+0000 010 0 0000 0101	;Exit if Loop Counter is 0
+0110 100 001 000000	;R4 = Mem[R1] Next Number
+0001 011 011 0 00 100	;R3 = R3 + R4 Accumulate
+0001 001 001 1 00001	;R1 = R1 + 1  Advance Pointer
+0001 010 010 1 11111	;R2 = R2 - 1  Decrement Counter
+0000 111 1 1111 1010	;Goto Loop
+;Loop exits here

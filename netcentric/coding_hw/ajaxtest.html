@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ajax test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Ajax test</h1>
+            <div id="buttons">
+                <a id="english-btn" class="btn btn-primary" href="#">EN</a> 
+                <a id="german-btn" class="btn btn-primary" href="#">DE</a> 
+                <a id="french-btn" class="btn btn-primary" href="#">FR</a> 
+                <a id="spanish-btn" class="btn btn-primary" href="#">ES</a> 
+            </div>
+
+            <hr />
+
+            <div id="content">
+                Choose a country above
+            </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var $buttons = $('#buttons a');
+                var $contentContainer = $('#content');
+
+                var lang_paths = {
+                    english: "ajaxContent/english.html",
+                    german: "ajaxContent/german.html",
+                    french: "ajaxContent/french.html",
+                    spanish: "ajaxContent/spanish.html",
+                }
+
+                $buttons.on('click', function(e) {
+                    var target = $(e.target);
+                    var targetId = target.attr('id');
+                    var targetLang = targetId.substring(0, targetId.indexOf('-btn'));
+                    
+                    var targetPath = lang_paths[targetLang];
+
+                    $contentContainer.load(targetPath);
+                });
+            });
+        </script>
+    </body>
+</html>

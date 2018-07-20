@@ -1,0 +1,41 @@
+;  PROGRAMMER:  Juan Alvarado  786.308.6966
+;
+;  CLASS:       CDA 3013 U02   MW 7:50pm
+;
+;  INSTRUCTOR:  Norman Pestaina
+;
+;  ASSIGNMENT:  Assignment 1
+;
+; CERTIFICATION: I certify that this work is my own and that
+;                 none of it is the work of any other person.
+;
+0011 0000 0000 0000 ; Load Address
+0101 010 010 1 00000 ; R2 = 0
+0010 011 000010011 ; R3 = pointer
+0010 101 000010011 ; R5 = pointer
+1111 0000 0010 0011 ; R0 = target (input)
+0110 001 011 00 0000 ; R1 = 1st character
+;Top of Loop
+0001 100 001 1 11100 ; R4 = R1 - 4
+0000 0100 00001010; Exit if 0 (R1 == 4)
+1001 001 001 11 1111
+0001 001 001 1 00001
+0001 001 001 000000 ; R1 = R0-R1
+0000 1010 0000 0011 ; Skip if not 0
+;Break
+0001 010 010 1 00001 ; R2++
+0111 011 101 000000; str R3
+0001 101 101 1 00001; R5 = R5 + 1
+;Break End
+0001 011 011 1 00001 ; R3++
+0110 001 011 00 0000 ; R1 = next char
+0000 1111 11110011 ; JUMP toTop ofLoop
+;Loop Exit
+0010 0000 0000 0101
+0001 000 000 000 010 ; R0 = ASCII(count)
+1111 0000 0010 0001 ; Print count
+1111 0000 0010 0101 ; Halt
+;Data/Variables
+0011 0001 0000 0000
+0011 0011 0000 0000 ;String address
+0000 0000 0011 0000 ;x30 ASCII '0'
